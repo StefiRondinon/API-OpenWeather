@@ -1,17 +1,21 @@
 import React from 'react';
+import '../styles/WeatherForm.css';
 
 const WeatherForm = props => (
-    <div className="card card-body">
+    <div className="card card-body justify-content-center ">
+        <h1 className="title text-center "> The weather of your city</h1>
         <form onSubmit={props.getWeather}>
-            <div className="form-group">
-            <input type="text" name="city" placeholder="Your city name" className="form-control" autoFocus></input>
+            <div className="form-group mt-2">
+                <input type="text" name="city" placeholder="Your city name" className="form-control" autoFocus></input>
             </div>
-            <div>
+            <div className="form-group mt-2">
                 <input type="text" name="country" placeholder="Your country name" className="form-control"></input>
             </div>
-            <button className="btn btn-success btn-block">
-                Get Weather
-            </button>
+            <div className="d-grid gap-2 col-4 mx-auto">
+                <button className="btn btn-primary mt-3">
+                    Get Weather
+                </button>
+            </div>
         </form>
     </div>
 )
